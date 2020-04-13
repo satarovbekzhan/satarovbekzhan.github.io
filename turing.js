@@ -24,8 +24,10 @@ class TuringMachine {
     move = () => {
         let currentState = ""
         this.states.forEach(s => {
-            if (s.charAt(0) === this.tape[this.index] && parseInt(s.charAt(3)) === this.state) {
-                currentState = s
+            if (s !== "") {
+                if (s.charAt(0) === this.tape[this.index] && parseInt(s.charAt(3)) === this.state) {
+                    currentState = s
+                }
             }
         })
         this.tape[this.index] = currentState.charAt(1)
