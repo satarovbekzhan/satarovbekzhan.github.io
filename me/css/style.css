@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap');
+
+* {
+    padding: 0;
+    font-family: 'Reenie Beanie', cursive;
+    box-sizing: border-box;
+    color: #3F3844;
+}
+
+body {
+    background-color: #ffffff;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23f7f7f8' fill-opacity='0.1' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+h1 {
+    font-size: 2.4rem;
+}
+
+p {
+    font-size: 1.8rem;
+}
+
+.wrapper {
+    position: relative;
+    width: 50vw;
+    height: auto;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+.name {
+    margin: 3rem 5rem;
+    text-align: center;
+}
+
+.bio {
+    background: #3F3844;
+    height: auto;
+    width: 100%;
+    padding: 5rem 4rem;
+    clip-path: polygon(1% 8%, 98% 0, 100% 100%, 0 94%);
+}
+
+.bio p {
+    text-align: center;
+    color: #ffffff;
+    fill: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23f7f7f8' fill-opacity='0.4' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.education {
+    padding: 5rem;
+}
+
+.education p {
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.education p small {
+    font-weight: normal;
+}
+
+.social {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    clip-path: polygon(0 0, 100% 8%, 99% 95%, 2% 100%);
+    background: #3F3844;
+    width: 100%;
+    padding: 0 5rem;
+}
+
+.social a {
+    padding: 2rem;
+}
+
+.social img {
+    fill: #ffffff;
+}
+
+.lang {
+    padding: 4rem 5rem 1rem 5rem;
+}
+
+.lang div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    padding: 0 5rem;
+}
+
+.lang p {
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.lang p small {
+    font-weight: normal;
+}
+
+.wrapper hr {
+    width: 80%;
+    margin: 1rem auto;
+    border: 1.4px solid #3F3844;
+    transform: rotate(1deg);
+}
+
+.skills {
+    padding: 4rem 5rem;
+}
+
+.skills p {
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.skills p small {
+    font-weight: normal;
+}
+
+.footer {
+    clip-path: polygon(0 7%, 100% 0, 99% 100%, 2% 100%);
+    background: #3F3844;
+    width: 100%;
+    height: auto;
+    padding: 2rem 5rem;
+    margin-bottom: 0;
+}
+
+.footer p {
+    text-align: center;
+    color: #ffffff;
+    fill: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23f7f7f8' fill-opacity='0.4' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+@media (min-width: 1281px) {}
+  
+/* 
+##Device = Laptops, Desktops
+##Screen = B/w 1025px to 1280px
+*/
+@media (min-width: 1025px) and (max-width: 1280px) {}
+
+/* 
+##Device = Tablets, Ipads (portrait)
+##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 1024px) {
+    .wrapper {width: 84%;}
+
+    h1 {font-size: 2.4rem;}
+    
+    p {font-size: 1.8rem;}
+
+    .name {margin: 2rem 1rem;}
+    
+    .bio {padding: 2rem;}
+
+    .education {padding: 1rem;}
+    
+    .education p {padding: 0;}
+    
+    .social {padding: 1rem;}
+    
+    .social a {padding: 2rem;}
+    
+    .lang {padding: 1rem;}
+    
+    .lang div {padding: 0;}
+    
+    .lang p {padding: 0;}
+    
+    .wrapper hr {
+        width: 40%;
+        margin: 1rem auto;
+        border: 1.4px solid #3F3844;
+        transform: rotate(1deg);
+    }
+    
+    .skills {padding: 1rem 3rem;}
+    
+    .skills p {padding: 0;}
+    
+    .footer {padding: 2rem 1rem;}
+}
+
+/* 
+##Device = Tablets, Ipads (landscape)
+##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .wrapper {width: 60%;}
+
+    h1 {font-size: 2.4rem;}
+    
+    p {font-size: 1.8rem;}
+
+    .name {margin: 2rem 1rem;}
+    
+    .bio {padding: 2rem;}
+
+    .education {padding: 1rem;}
+    
+    .education p {padding: 0;}
+    
+    .social {padding: 1rem;}
+    
+    .social a {padding: 2rem;}
+    
+    .lang {padding: 1rem;}
+    
+    .lang div {padding: 0;}
+    
+    .lang p {padding: 0;}
+    
+    .wrapper hr {
+        width: 40%;
+        margin: 1rem auto;
+        border: 1.4px solid #3F3844;
+        transform: rotate(1deg);
+    }
+    
+    .skills {padding: 1rem 3rem;}
+    
+    .skills p {padding: 0;}
+    
+    .footer {padding: 2rem 1rem;}
+}
+
+/* 
+##Device = Low Resolution Tablets, Mobiles (Landscape)
+##Screen = B/w 481px to 767px
+*/
+@media (min-width: 481px) and (max-width: 767px) {
+    .wrapper {width: 100%;}
+
+    h1 {font-size: 2.4rem;}
+    
+    p {font-size: 1.8rem;}
+
+    .name {margin: 2rem 1rem;}
+    
+    .bio {padding: 2rem;}
+
+    .education {padding: 1rem;}
+    
+    .education p {padding: 0;}
+    
+    .social {padding: 1rem;}
+    
+    .social a {padding: 2rem;}
+    
+    .lang {padding: 1rem;}
+    
+    .lang div {padding: 0;}
+    
+    .lang p {padding: 0;}
+    
+    .wrapper hr {
+        width: 40%;
+        margin: 1rem auto;
+        border: 1.4px solid #3F3844;
+        transform: rotate(1deg);
+    }
+    
+    .skills {padding: 1rem 3rem;}
+    
+    .skills p {padding: 0;}
+    
+    .footer {padding: 2rem 1rem;}
+}
+
+/* 
+##Device = Most of the Smartphones Mobiles (Portrait)
+##Screen = B/w 320px to 479px
+*/
+@media (min-width: 320px) and (max-width: 480px) {
+    .wrapper {width: 100%;}
+
+    h1 {font-size: 2.4rem;}
+    
+    p {font-size: 1.8rem;}
+
+    .name {margin: 2rem 1rem;}
+    
+    .bio {padding: 2rem 1rem;}
+
+    .education {padding: 1rem;}
+    
+    .education p {padding: 0;}
+    
+    .social {padding: 0;}
+    
+    .social a {padding: 1rem;}
+    
+    .lang {padding: 1rem;}
+    
+    .lang div {padding: 0;}
+    
+    .lang p {padding: 0;}
+    
+    .wrapper hr {
+        width: 40%;
+        margin: 1rem auto;
+        border: 1.4px solid #3F3844;
+        transform: rotate(1deg);
+    }
+    
+    .skills {padding: 1rem;}
+    
+    .skills p {padding: 0;}
+    
+    .footer {padding: 2rem 1rem;}
+}
