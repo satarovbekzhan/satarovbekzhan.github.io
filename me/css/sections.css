@@ -1,0 +1,202 @@
+/* about ******************************************************************/
+#about .container {
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about p {
+    text-align: center;
+}
+
+/* education ******************************************************************/
+#education .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#education a {
+    text-decoration: none;
+}
+
+#education h1, #education p {
+    text-align: center;
+}
+
+/* skills ******************************************************************/
+#skills .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#skills .content {
+    height: 100vh;
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#skills .tagcloud {
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+#skills .tagcloud--item {
+    padding: 2px 4px;
+    background-color: transparent;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+#skills .tagcloud--item:hover {
+    opacity: 1 !important;
+    z-index: 100 !important;
+    font-weight: bold;
+}
+
+#skills .light .tagcloud--item {
+    color: #fff;
+}
+
+#skills .light .tagcloud--item:hover {
+    background-color: rgba(255,255,255,.1);
+    border: 1px solid #fff;
+}
+
+/* languages ******************************************************************/
+#languages .container {
+    display: grid;
+    grid-template-columns: 6fr 2fr 6fr;
+    column-gap: 1rem;
+    align-content: center;
+}
+
+#languages p {
+    align-self: center;
+}
+
+#languages p.l {
+    text-align: right;
+}
+
+#languages span {
+    width: 30%;
+    height: 30%;
+    justify-self: center;
+    align-self: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: drop-shadow(-1px -1px 1px rgba(255,255,255,.1))
+        drop-shadow(1px 1px 1px rgba(0,0,0,.5))
+        drop-shadow(2px 2px 2px rgba(206,89,55,0));
+}
+
+/* contact ******************************************************************/
+#contact .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#contact form {
+    width: 60%;
+    display: grid;
+    grid-template-areas:
+            "name name"
+            "email email"
+            "subject subject"
+            "message message"
+            /*"message"*/
+            ". submit";
+    gap: 1rem;
+}
+
+#contact form * {
+    padding: .6rem;
+    font-size: 1.2rem;
+    border: #f3f3f3 solid 1px;
+    border-radius: 4px;
+    outline: none;
+    background-color: #ffffff;
+}
+
+#contact form *:focus {
+    border: #dcdcdc solid 1px;
+}
+
+#contact input[name="name"] {
+    grid-area: name;
+}
+
+#contact input[name="email"] {
+    grid-area: email;
+}
+
+#contact input[name="subject"] {
+    grid-area: subject;
+}
+
+#contact textarea {
+    grid-area: message;
+    resize: none;
+}
+
+#contact button {
+    grid-area: submit;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: #eeeded;
+}
+
+#contact button:hover {
+    background-color: #e7e7e7;
+}
+
+/* for mobile ******************************************************************/
+@media (max-width: 576px) {
+/* about */
+    #about .container {
+        width: 86vw;
+    }
+    #about p {
+        text-align: left;
+    }
+/* education */
+    #education h1, #education p {
+        text-align: left;
+    }
+/* skills */
+    #skills .tagcloud {
+        font-size: 1.2rem;
+    }
+/* languages */
+    #languages .container {
+        grid-template-columns: 4fr 2fr 6fr;
+        column-gap: .5rem;
+        align-content: center;
+        justify-content: left;
+    }
+    #languages span {
+        width: 50%;
+        height: 30%;
+    }
+    #languages p, #languages span {
+        justify-self: left;
+    }
+/* contact */
+    #contact form {
+        width: 90%;
+        grid-template-areas:
+            "name"
+            "email"
+            "subject"
+            "message"
+            "submit";
+    }
+}
