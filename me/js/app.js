@@ -40,11 +40,24 @@ let tagCloud = TagCloud('.content', myTags, {
 window.onload = function() {
     document.getElementById('contact_form').addEventListener('submit', function (event) {
         event.preventDefault();
+        let button = this.getElementsByTagName('button')[0];
+        button.setAttribute('disabled', 'true');
+        button.innerHTML = "sending...";
         emailjs.sendForm('service_1v23grj', 'template_uk0x0kp', this)
             .then(function() {
                 console.log('SUCCESS!');
+                info('Thank you! I have received your message and will answer you as soon as possible.')
             }, function(error) {
                 console.log('FAILED...', error);
+                info('Sorry! There is an unexpected problem. Try it later.')
             });
     });
+}
+
+function info(txt) {
+    let section = document.getElementById('contact_section');
+    let p = document.createElement('p');
+    p.innerHTML = txt +  '';
+    section.innerHTML = '';
+    section.appendChild(p);
 }
