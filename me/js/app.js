@@ -32,3 +32,19 @@ let tagCloud = TagCloud('.content', myTags, {
     keep: true
 
 });
+
+(function() {
+    emailjs.init("user_dRYEJNzYYVxo7a625g9n0");
+})();
+
+window.onload = function() {
+    document.getElementById('contact_form').addEventListener('submit', function (event) {
+        event.preventDefault();
+        emailjs.sendForm('service_1v23grj', 'template_uk0x0kp', this)
+            .then(function() {
+                console.log('SUCCESS!');
+            }, function(error) {
+                console.log('FAILED...', error);
+            });
+    });
+}
