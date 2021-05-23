@@ -1,32 +1,102 @@
-/* about ******************************************************************/
-#about .container {
+#welcome {
+    background-color: #121212;
+}
+
+#welcome div:first-of-type {
+    position: relative;
+    width: calc(100vw + 15px);
+    height: calc(100vh + 15px);
+    top: -15px;
+    left: -15px;
+    font-size: 1.2rem;
+    text-align: justify;
+    background: url("../media/bg.png") fixed center / cover;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255,255,255,.08);
+    /*font-family: "Bodoni MT", serif;*/
+    font-family: "Times New Roman", serif;
+    font-weight: bolder;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
+#welcome div:nth-of-type(2) {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 50vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1rem 0;
+}
+
+#welcome span:first-of-type {
+    display: flex;
+    gap: 1rem;
+}
+
+#welcome a {
+    height: 3rem;
+    width: 3rem;
+    filter: drop-shadow(-1px -1px 1px rgba(255,255,255,.1))
+    drop-shadow(1px 1px 1px rgba(0,0,0,.5))
+    drop-shadow(2px 2px 2px rgba(206,89,55,0));
+}
+
+
+#welcome h1, h3 {
+    font-family: "Britannic Bold", sans-serif;
+    text-transform: uppercase;
+}
+
+#welcome h1 {
+    color: #EBEBEB;
+    font-size: 4rem;
+    text-shadow: 2px 2px 0 #7A7A7A, -14px -20px 5px rgba(206,89,55,0);
+}
+
+#welcome h3 {
+    color: #b1b0b0;
+    text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5), 2px 2px 2px rgba(206,89,55,0);
+    font-size: 2rem;
+    font-style: italic;
+}
+
+/*#################################################*/
+
+#about .container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#about p {
+#about .container p {
     text-align: center;
 }
 
-/* education ******************************************************************/
+/*#################################################*/
+
 #education .container {
     display: flex;
-    /*flex-direction: column;*/
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
-#education a {
-    text-decoration: none;
-}
-
-#education h1, #education p {
+#education .container p {
     text-align: center;
 }
 
-/* skills ******************************************************************/
+#education .container p span {
+    font-style: italic;
+}
+
+/*#################################################*/
+
 #skills .container {
     display: flex;
     justify-content: center;
@@ -68,27 +138,35 @@
     border: 1px solid #fff;
 }
 
-/* languages ******************************************************************/
+/*#################################################*/
+
 #languages .container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#languages p {
-    text-align: center;
+#languages .container p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
 }
 
-/* contact ******************************************************************/
+#languages .container span:nth-of-type(2) {
+    font-style: italic;
+}
+
+/*#################################################*/
+
 #contact .container {
-    width: 40vw;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
 
 #contact form {
-    width: 100%;
+    width: 60%;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -98,59 +176,37 @@
     flex: 1 0 100%;
     padding: .6rem;
     font-size: 1.2rem;
-    border: #f3f3f3 solid 1px;
-    border-radius: 4px;
+    border: #121212 solid 1px;
     outline: none;
     background-color: #ffffff;
     resize: none;
 }
 
 #contact form *:focus {
-    border: #dcdcdc solid 1px;
+    box-shadow: 1px 1px #1f1f1f;
 }
 
 #contact button {
     grid-area: submit;
     cursor: pointer;
     text-transform: uppercase;
-    background-color: #b7f148;
+    background-color: #121212;
+    border: none;
     color: #FFFEFF;
 }
 
 #contact button:hover {
-    background-color: #8cb822;
+    box-shadow: 1px 1px #666262;
 }
 
-/* for mobile ******************************************************************/
 @media (max-width: 576px) {
-/* about */
-    #about .container {
-        width: 86vw;
+    #welcome div:nth-of-type(2) {
+        width: 96vw;
     }
-    #about p {
-        text-align: left;
-    }
-/* education */
-    #education .container {
-        justify-content: left;
-    }
-    #education h1, #education p {
-        text-align: left;
-    }
-/* skills */
     #skills .tagcloud {
         font-size: 1.2rem;
     }
-/* languages */
-    #languages .container {
-        justify-content: left;
-    }
-    #languages p {
-        text-align: left;
-    }
-/* contact */
-    #contact .container {
-        width: 80vw;
-        padding-right: 6vw;
+    #contact form {
+        width: 100%;
     }
 }
