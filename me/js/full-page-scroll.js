@@ -146,11 +146,23 @@
 				_self.defaults.currentPosition ++;
 				_self.changeCurrentPosition(_self.defaults.currentPosition);				
 			} else if (event.deltaY < 0 || event.keyCode == 38) {
-				_self.defaults.currentPosition --;
-				_self.changeCurrentPosition(_self.defaults.currentPosition);	
+				if (document.getElementById('cv__container').getBoundingClientRect().top === 0) {
+					_self.defaults.currentPosition--;
+					_self.changeCurrentPosition(_self.defaults.currentPosition);
+				}
 			}
 			_self.removeEvents();
 		};
+		// this.mouseWheelAndKey = function (event) {
+		// 	if (event.deltaY > 0 || event.keyCode == 40) {
+		// 		_self.defaults.currentPosition ++;
+		// 		_self.changeCurrentPosition(_self.defaults.currentPosition);
+		// 	} else if (event.deltaY < 0 || event.keyCode == 38) {
+		// 		_self.defaults.currentPosition --;
+		// 		_self.changeCurrentPosition(_self.defaults.currentPosition);
+		// 	}
+		// 	_self.removeEvents();
+		// };
 
 		this.touchStart = function (event) {
 			mTouchStart = parseInt(event.changedTouches[0].clientY);

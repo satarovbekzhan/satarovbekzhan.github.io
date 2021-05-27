@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
 #welcome {
     background-color: #121212;
 }
@@ -8,13 +12,11 @@
     height: calc(100vh + 15px);
     top: -15px;
     left: -15px;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     text-align: justify;
     background: url("../media/bg.png") fixed center / cover;
     -webkit-background-clip: text;
     -webkit-text-fill-color: rgba(255,255,255,.08);
-    /*font-family: "Bodoni MT", serif;*/
-    font-family: "Times New Roman", serif;
     font-weight: bolder;
     -webkit-user-select: none; /* Safari */
     -moz-user-select: none; /* Firefox */
@@ -35,10 +37,10 @@
     padding: 1rem 0;
 }
 
-#welcome span:first-of-type {
-    display: flex;
-    gap: 1rem;
-}
+/*#welcome span:first-of-type {*/
+/*    display: flex;*/
+/*    gap: 1rem;*/
+/*}*/
 
 #welcome a {
     height: 3rem;
@@ -48,16 +50,11 @@
     drop-shadow(2px 2px 2px rgba(206,89,55,0));
 }
 
-
-#welcome h1, h3 {
-    font-family: "Britannic Bold", sans-serif;
-    text-transform: uppercase;
-}
-
 #welcome h1 {
     color: #EBEBEB;
     font-size: 4rem;
     text-shadow: 2px 2px 0 #7A7A7A, -14px -20px 5px rgba(206,89,55,0);
+    font-family: 'Abril Fatface', cursive;
 }
 
 #welcome h3 {
@@ -65,148 +62,237 @@
     text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5), 2px 2px 2px rgba(206,89,55,0);
     font-size: 2rem;
     font-style: italic;
+    font-family: 'Playfair Display', serif;
 }
 
 /*#################################################*/
 
-#about .container {
+#cv {
+    height: auto;
+    overflow-y: auto;
+}
+
+#cv__container {
+    padding-top: 2rem;
+}
+
+.paper {
+    --paper-color: #d5e0f9;
+    --paper-dark: #c2d0ea;
+    --shadow-size: 0;
+    --transparent: rgba(213, 224, 249, 0);
+    padding: 1rem;
+    position: relative;
+    background: linear-gradient(
+            to bottom right,
+            var(--paper-dark),
+            20%,
+            var(--transparent)
+    ),
+    var(--paper-color);
     display: flex;
-    justify-content: center;
     align-items: center;
-}
-
-#about .container p {
-    text-align: center;
-}
-
-/*#################################################*/
-
-#education .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-
-#education .container p {
-    text-align: center;
-}
-
-#education .container p span {
-    font-style: italic;
-}
-
-/*#################################################*/
-
-#skills .container {
-    display: flex;
     justify-content: center;
-    align-items: center;
+    box-shadow: var(--shadow-size) var(--shadow-size) 2px var(--paper-dark);
+    /*margin: 50px auto auto;*/
+
 }
 
-#skills .content {
-    height: 100vh;
-    width: 90vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.paper > div {
+    width: 100%;
 }
 
-#skills .tagcloud {
-    font-size: 1.6rem;
-    text-align: center;
+.paper::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+            var(--transparent),
+            50%,
+            var(--paper-dark),
+            51%,
+            var(--transparent)
+    ),
+    linear-gradient(
+            to right,
+            var(--transparent),
+            50%,
+            var(--paper-dark),
+            51%,
+            var(--transparent)
+    );
 }
 
-#skills .tagcloud--item {
-    padding: 2px 4px;
-    background-color: transparent;
-    border: 1px solid transparent;
-    cursor: pointer;
-}
-
-#skills .tagcloud--item:hover {
-    opacity: 1 !important;
-    z-index: 100 !important;
-    font-weight: bold;
-}
-
-#skills .light .tagcloud--item {
-    color: #fff;
-}
-
-#skills .light .tagcloud--item:hover {
-    background-color: rgba(255,255,255,.1);
-    border: 1px solid #fff;
-}
-
-/*#################################################*/
-
-#languages .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#languages .container p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-}
-
-#languages .container span:nth-of-type(2) {
-    font-style: italic;
-}
-
-/*#################################################*/
-
-#contact .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#contact form {
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-#contact form * {
-    flex: 1 0 100%;
-    padding: .6rem;
-    font-size: 1.2rem;
-    border: #121212 solid 1px;
-    outline: none;
-    background-color: #ffffff;
-    resize: none;
-}
-
-#contact form *:focus {
-    box-shadow: 1px 1px #1f1f1f;
-}
-
-#contact button {
-    grid-area: submit;
-    cursor: pointer;
-    text-transform: uppercase;
-    background-color: #121212;
+.png {
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
     border: none;
-    color: #FFFEFF;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
-#contact button:hover {
-    box-shadow: 1px 1px #666262;
+/*###################################################*/
+
+#about .paper::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+            to right,
+            var(--transparent),
+            50%,
+            var(--paper-dark),
+            51%,
+            var(--transparent)
+    );
+}
+
+/*###################################################*/
+
+#lang .paper div {
+    display: flex;
+    justify-content: space-between;
+}
+
+#lang p:nth-of-type(2) {
+    text-align: right;
+}
+
+/*###################################################*/
+
+#skills p {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+#skills p span {
+    display: block;
+}
+
+#skills p span:nth-of-type(2) {
+    text-align: right;
+}
+
+/*###################################################*/
+
+#pdata .paper::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+            to right,
+            var(--transparent),
+            50%,
+            var(--paper-dark),
+            51%,
+            var(--transparent)
+    );
+}
+
+#pdata p {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+#pdata p span {
+    display: block;
+}
+
+#skills p span:nth-of-type(2) {
+    text-align: right;
+}
+
+
+/*###################################################*/
+
+#contacts .paper::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+            to right,
+            var(--transparent),
+            50%,
+            var(--paper-dark),
+            51%,
+            var(--transparent)
+    );
+}
+
+#contact_section {
+    z-index: 100;
+    width: 100%;
+}
+
+#contact_section form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#contact_section textarea, #contact_section button {
+    font-size: 1.4rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+#contact_section textarea {
+    resize: horizontal;
+}
+
+#contact_section button {
+    width: 40%;
+    margin-left: auto;
+    padding: .5rem;
+    background-color: rgba(184, 197, 224, 0.56);
+    cursor: pointer;
+}
+
+#contact_section button:hover {
+    background-color: rgba(142, 156, 194, 0.64);
+}
+
+#contacts > p {
+    text-align: center;
+}
+
+#contacts .links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+#contacts .links img {
+    height: 3rem;
+    width: 3rem;
 }
 
 @media (max-width: 576px) {
+    #welcome div:first-of-type {
+        font-size: 1rem;
+    }
     #welcome div:nth-of-type(2) {
         width: 96vw;
     }
-    #skills .tagcloud {
-        font-size: 1.2rem;
+    #welcome h1 {
+        font-size: 2rem;
     }
-    #contact form {
+    #welcome h3 {
+        font-size: 1rem;
+    }
+    #pdata p:nth-of-type(2) {
+        /**/
+    }
+    #contact_section button {
         width: 100%;
     }
 }

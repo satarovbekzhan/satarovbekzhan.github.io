@@ -1,10 +1,10 @@
 
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /*font-family: "Britannic Bold", serif;*/
-    font-family: "Times New Roman", serif;
+    font-family: "Lucida Sans", serif;
 }
 
 body {
@@ -13,8 +13,14 @@ body {
     background-size: cover;
 }
 
+h1 {
+    font-size: 3rem;
+    margin: 1rem 0;
+}
+
 p {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+    /*font-family: "Times New Roman", serif;*/
 }
 
 .section {
@@ -27,8 +33,22 @@ p {
     margin: 0 auto;
 }
 
+/*.it {*/
+/*    font-style: italic;*/
+/*}*/
+
+/*.grey {*/
+/*    color: #7A7A7A;*/
+/*}*/
+
 @media (max-width: 576px) {
     .container {
         width: 96vw;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    p {
+        font-size: 1.3rem;
     }
 }
