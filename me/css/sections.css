@@ -77,10 +77,14 @@
 }
 
 .paper {
-    --paper-color: #d5e0f9;
-    --paper-dark: #c2d0ea;
+    --paper-color: #E7D9C0;
+    --paper-dark: #D9C69E;
     --shadow-size: 0;
     --transparent: rgba(213, 224, 249, 0);
+    /*--paper-color: #d5e0f9;*/
+    /*--paper-dark: #c2d0ea;*/
+    /*--shadow-size: 0;*/
+    /*--transparent: rgba(213, 224, 249, 0);*/
     padding: 1rem;
     position: relative;
     background: linear-gradient(
@@ -253,12 +257,12 @@
     width: 40%;
     margin-left: auto;
     padding: .5rem;
-    background-color: rgba(184, 197, 224, 0.56);
+    background-color: rgba(201, 180, 132, 0.87);
     cursor: pointer;
 }
 
 #contact_section button:hover {
-    background-color: rgba(142, 156, 194, 0.64);
+    background-color: rgba(180, 155, 95, 0.56);
 }
 
 #contacts > p {
